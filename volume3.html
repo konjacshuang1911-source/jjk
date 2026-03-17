@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Jujutsu Kaisen Volume 3</title>
+
+<style>
+
+body{
+font-family:Arial;
+background-color:#3a3a3a;
+color:white;
+text-align:center;
+}
+
+.info-box{
+max-width:700px;
+margin:auto;
+background:#2b2b2b;
+padding:25px;
+border-radius:12px;
+}
+
+/* BOOK FLIP */
+
+.book-card{
+width:250px;
+height:350px;
+margin:auto;
+perspective:1000px;
+cursor:pointer;
+}
+
+.book-inner{
+position:relative;
+width:100%;
+height:100%;
+transition:transform 0.7s;
+transform-style:preserve-3d;
+}
+
+.book-card.flip .book-inner{
+transform:rotateY(180deg);
+}
+
+.book-front,
+.book-back{
+position:absolute;
+width:100%;
+height:100%;
+backface-visibility:hidden;
+border-radius:8px;
+}
+
+.book-front img,
+.book-back img{
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:8px;
+}
+
+.book-back{
+transform:rotateY(180deg);
+}
+
+/* button */
+
+button{
+margin-top:20px;
+background:#4CAF50;
+border:none;
+padding:10px 20px;
+color:white;
+cursor:pointer;
+border-radius:8px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Jujutsu Kaisen Volume 3</h1>
+
+<div class="info-box">
+
+<!-- FLIP BOOK -->
+
+<div class="book-card" onclick="this.classList.toggle('flip')">
+
+<div class="book-inner">
+
+<div class="book-front">
+<img src="images/3.jpg" alt="Jujutsu Kaisen Front Cover">
+</div>
+
+<div class="book-back">
+<img src="images/jjk3back.jpg" alt="Jujutsu Kaisen Back Cover">
+</div>
+
+</div>
+
+</div>
+
+<p>Click the book to flip it.</p>
+
+<h2>Summary</h2>
+
+<p>
+Volume 3 covers the buildup to the Kyoto Goodwill Event, early clashes between Tokyo and Kyoto students, and a disturbing case involving a cursed spirit causing grotesque body alterations. It focuses on character development for Fushiguro, Kugisaki, and Yuji while setting up major conflicts for the next arc.
+</p>
+
+<h2>Where to Buy</h2>
+
+<p>
+Amazon, Barnes & Noble, local bookstores, or libraries.
+</p>
+
+<h2>Extra Facts</h2>
+
+<p>
+• Written by Gege Akutami  
+• First published in 2018  
+• Introduces Yuji, Megumi, and Gojo
+</p>
+
+<a href="manga.html">
+<button>Back to Manga</button>
+</a>
+
+</div>
+
+</body>
+
+</html>

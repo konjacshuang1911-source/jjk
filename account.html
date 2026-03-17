@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Sorcerer Network Account</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#3a3a3a;
+color:white;
+text-align:center;
+}
+
+input{
+padding:10px;
+margin:10px;
+}
+
+button{
+padding:10px 20px;
+background:#4CAF50;
+border:none;
+color:white;
+cursor:pointer;
+}
+
+img{
+margin-top:15px;
+border-radius:50%;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Sorcerer Network Account</h1>
+
+<h2>Sign Up</h2>
+
+<input id="signupUser" placeholder="Username"><br>
+<input id="signupPass" type="password" placeholder="Password"><br>
+
+<p>Select a profile picture</p>
+
+<select id="pfp">
+<option value="images/pfp1.png">Avatar 1</option>
+<option value="images/pfp2.png">Avatar 2</option>
+<option value="images/pfp3.png">Avatar 3</option>
+</select>
+
+<br><br>
+
+<button onclick="signup()">Create Account</button>
+
+<hr>
+
+<h2>Login</h2>
+
+<input id="loginUser" placeholder="Username"><br>
+<input id="loginPass" type="password" placeholder="Password"><br>
+
+<button onclick="login()">Login</button>
+
+<div id="profile"></div>
+
+<script>
+
+function signup(){
+
+let username=document.getElementById("signupUser").value
+let password=document.getElementById("signupPass").value
+let pfp=document.getElementById("pfp").value
+
+let account={
+username:username,
+password:password,
+pfp:pfp
+}
+
+localStorage.setItem("account",JSON.stringify(account))
+
+alert("Account created!")
+
+}
+
+function login(){
+
+let username=document.getElementById("loginUser").value
+let password=document.getElementById("loginPass").value
+
+let saved=JSON.parse(localStorage.getItem("account"))
+
+if(saved && username===saved.username && password===saved.password){
+
+document.getElementById("profile").innerHTML=
+
+"<h3>Welcome "+saved.username+"</h3>"+
+"<img src='"+saved.pfp+"' width='100'>"
+
+}else{
+
+alert("Wrong username or password")
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Sorcerer Network</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+
+    body {
+      font-family: Arial;
+      background-color: #3a3a3a;
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding-bottom: 40px;
+      transition: background-image 0.5s ease;
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* BUTTON STYLE */
+
+    button{
+      background-color:#4CAF50;
+      color:white;
+      padding:16px 32px;
+      font-size:18px;
+      border:none;
+      cursor:pointer;
+      transition:all 0.3s ease;
+      width:220px;
+      height:60px;
+    }
+
+    button:hover{
+      transform:scale(1.15);
+      color:white;
+      background-size:cover;
+      background-position:center;
+    }
+
+    /* IMAGE HOVER EFFECTS */
+
+    .mangabtn:hover{
+      background-image:url("images/manga.jpg");
+    }
+
+    .animebtn:hover{
+      background-image:url("images/anime.png");
+    }
+
+    .coolbtn:hover{
+      background-image:url("images/cool.jpg");
+    }
+
+    .characterbtn:hover{
+      background-image:url("images/characters.jpg");
+    }
+
+    .productbtn:hover{
+      background-image:url("images/products.jpg");
+    }
+
+    .musicbtn:hover{
+      background-image:url("images/music.jpg");
+    }
+
+    /* ACCOUNT BUTTON CORNER */
+
+    .account-corner{
+      position:fixed;
+      top:20px;
+      left:20px;
+      z-index:1000;
+    }
+
+    /* Banner */
+
+    .banner{
+      position:fixed;
+      bottom:0;
+      left:0;
+      width:100%;
+      background-color:#4CAF50;
+      overflow:hidden;
+      height:40px;
+      line-height:40px;
+      color:white;
+    }
+
+    .banner p{
+      display:inline-block;
+      white-space:nowrap;
+      padding-left:100%;
+      animation:scroll 15s linear infinite;
+      margin:0;
+    }
+
+    @keyframes scroll{
+      0%{transform:translateX(0);}
+      100%{transform:translateX(-100%);}
+    }
+
+    /* BACKGROUND SELECTOR */
+
+    #bgSelect{
+      padding:8px;
+      font-size:14px;
+      cursor:pointer;
+    }
+
+    .bg-container{
+      position:fixed;
+      top:20px;
+      right:20px;
+      background-color:rgba(0,0,0,0.6);
+      padding:10px;
+      border-radius:8px;
+      z-index:1000;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- ACCOUNT BUTTON IN CORNER -->
+
+  <div class="account-corner">
+    <a href="account.html"><button class="accountbtn">Account (WIP) </button></a>
+  </div>
+
+  <!-- Background selector -->
+
+  <div class="bg-container">
+    <label for="bgSelect">Background:</label>
+    <select id="bgSelect">
+      <option value="">Default</option>
+      <option value="images/sukuna.png">Sukuna</option>
+      <option value="images/yuji.jpg">Yuji</option>
+      <option value="images/gojogeto.jpg">gojo geto</option>
+      <option value="images/thestrongest.jpg">jjs</option>
+      <option value="images/shi.webp">shibuya</option>
+    </select>
+  </div>
+
+  <h1>Welcome to Sorcerer Network, a website all about JJK!</h1>
+
+  <p class="rainbow-text">Click on a subject to begin.</p>
+
+  <a href="manga.html"><button class="mangabtn">Manga</button></a>
+  <br><br>
+
+  <a href="anime.html"><button class="animebtn">Anime</button></a>
+  <br><br>
+
+  <a href="coolstuff.html"><button class="coolbtn">Cool Stuff</button></a>
+  <br><br>
+
+  <a href="characters.html"><button class="characterbtn">Characters</button></a>
+  <br><br>
+
+  <a href="products.html"><button class="productbtn">Products</button></a>
+  <br><br>
+
+  <a href="music.html"><button class="musicbtn">Music</button></a>
+
+  <p>More coming soon!</p>
+
+  <br>
+
+  <img src="images/logo.png" alt="logo" style="width:200px;height:100px;">
+
+  <!-- Banner -->
+
+  <div class="banner">
+    <p>⚡ Welcome to Sorcerer Network! Check out the latest manga and anime updates today! Make sure to thank Gege, the author of JJK ⚡</p>
+  </div>
+
+  <!-- Background changer -->
+
+  <script>
+
+  const bgSelect=document.getElementById('bgSelect');
+
+  bgSelect.addEventListener('change',()=>{
+
+  const selected=bgSelect.value;
+
+  if(selected){
+  document.body.style.backgroundImage=`url('${selected}')`;
+  }else{
+  document.body.style.backgroundImage='';
+  }
+
+  });
+
+  </script>
+
+<script>
+
+const images = [
+"images/manga.jpg",
+"images/anime.jpg",
+"images/cool.jpg",
+"images/characters.jpg",
+"images/products.jpg",
+"images/music.jpg"
+];
+
+images.forEach(src => {
+  const img = new Image();
+  img.src = src;
+});
+
+</script>
+
+</body>
+
+</html>

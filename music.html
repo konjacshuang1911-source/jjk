@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>MUSIC!!!</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial;
+      background-color: #3a3a3a;
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding-bottom: 50px; /* space for the banner */
+    }
+
+    .song-btn,
+    .home-btn {
+      display: inline-block;
+      background-color: #4CAF50;
+      color: white;
+      padding: 16px 32px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      margin: 10px;
+      text-decoration: none; /* remove underline */
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .song-btn:hover,
+    .home-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    iframe {
+      margin-top: 20px;
+      border: none;
+    }
+
+    /* Banner styles */
+    .banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #4CAF50;
+      overflow: hidden;
+      height: 40px;
+      line-height: 40px;
+      color: white;
+    }
+
+    .banner p {
+      display: inline-block;
+      white-space: nowrap;
+      padding-left: 100%;
+      animation: scroll 15s linear infinite;
+      margin: 0;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>MUSIC!!!</h1>
+  <p>Welcome to the music section! Click a song to listen!</p>
+
+  <!-- Back to homepage button -->
+  <a class="home-btn" href="index.html">← Back to Homepage</a>
+
+  <!-- Song buttons -->
+  <p>Openings</p>
+  <a class="song-btn" href="https://www.youtube.com/embed/VIDEO_ID_1" target="songFrame">season 1 op 1 - KaiKai Kitan by eve</a>
+  <a class="song-btn" href="https://www.youtube.com/embed/VIDEO_ID_2" target="songFrame">season 1 op 2 - KaiKai Kitan by eve</a>
+  <a class="song-btn" href="https://www.youtube.com/embed/VIDEO_ID_3" target="songFrame">season 1 op 3 - KaiKai Kitan by eve</a>
+
+  <!-- Example image -->
+  <div>
+    <img src="images/fina.png" alt="Girl in a jacket" style="width:200px;height:150px;">
+  </div>
+
+  <!-- Scrolling banner -->
+  <div class="banner">
+    <p>🎵 Welcome to Sorcerer Network Music! Enjoy your favorite JJK tracks! Unfortunately, because these songs are copyrighted, we cannot display them here. but, we do have the links to the songs. 🎵</p>
+  </div>
+
+</body>
+
+</html>
