@@ -14,11 +14,31 @@ text-align:center;
 }
 
 .info-box{
-max-width:700px;
+max-width:900px;
 margin:auto;
 background:#2b2b2b;
 padding:25px;
 border-radius:12px;
+}
+
+/* ROW: book + side box */
+.book-row{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:30px;
+flex-wrap:wrap;
+margin-bottom:20px;
+}
+
+/* SIDE INFO BOX */
+.side-info{
+background:#1f1f1f;
+padding:15px;
+border-radius:10px;
+border-left:4px solid #4CAF50;
+width:200px;
+text-align:left;
 }
 
 /* BOOK FLIP */
@@ -26,7 +46,6 @@ border-radius:12px;
 .book-card{
 width:250px;
 height:350px;
-margin:auto;
 perspective:1000px;
 cursor:pointer;
 }
@@ -86,21 +105,31 @@ border-radius:8px;
 
 <div class="info-box">
 
-<!-- FLIP BOOK -->
+<!-- BOOK + SIDE INFO -->
+<div class="book-row">
 
-<div class="book-card" onclick="this.classList.toggle('flip')">
+  <!-- FLIP BOOK -->
+  <div class="book-card" onclick="this.classList.toggle('flip')">
+    <div class="book-inner">
 
-<div class="book-inner">
+      <div class="book-front">
+        <img src="images/2.jpg" alt="Front Cover">
+      </div>
 
-<div class="book-front">
-<img src="images/2.jpg" alt="Jujutsu Kaisen Front Cover">
-</div>
+      <div class="book-back">
+        <img src="images/jjk2back.jpg" alt="Back Cover">
+      </div>
 
-<div class="book-back">
-<img src="images/jjk2back.jpg" alt="Jujutsu Kaisen Back Cover">
-</div>
+    </div>
+  </div>
 
-</div>
+  <!-- SIDE BOX -->
+  <div class="side-info">
+    <h3>Cover Info</h3>
+    <p><strong>Characters:</strong> Megumi Fushiguro, Nue</p>
+    <p><strong>Theme:</strong> Danger / Power</p>
+    <p><strong>Vibe:</strong> Dark / Intense</p>
+  </div>
 
 </div>
 
@@ -120,7 +149,7 @@ Amazon, Barnes & Noble, local bookstores, or libraries.
 
 <h2>Arc</h2>
 
-<p> fearsome womb arc parts 1 & 2 </p>
+<p>Fearsome Womb Parts 3 & 4</p>
 
 <a href="manga.html">
 <button>Back to Manga</button>

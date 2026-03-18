@@ -14,11 +14,31 @@ text-align:center;
 }
 
 .info-box{
-max-width:700px;
+max-width:900px;
 margin:auto;
 background:#2b2b2b;
 padding:25px;
 border-radius:12px;
+}
+
+/* ROW: book + side box */
+.book-row{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:30px;
+flex-wrap:wrap;
+margin-bottom:20px;
+}
+
+/* SIDE INFO BOX */
+.side-info{
+background:#1f1f1f;
+padding:15px;
+border-radius:10px;
+border-left:4px solid #4CAF50;
+width:200px;
+text-align:left;
 }
 
 /* BOOK FLIP */
@@ -26,7 +46,6 @@ border-radius:12px;
 .book-card{
 width:250px;
 height:350px;
-margin:auto;
 perspective:1000px;
 cursor:pointer;
 }
@@ -86,21 +105,31 @@ border-radius:8px;
 
 <div class="info-box">
 
-<!-- FLIP BOOK -->
+<!-- BOOK + SIDE INFO -->
+<div class="book-row">
 
-<div class="book-card" onclick="this.classList.toggle('flip')">
+  <!-- FLIP BOOK -->
+  <div class="book-card" onclick="this.classList.toggle('flip')">
+    <div class="book-inner">
 
-<div class="book-inner">
+      <div class="book-front">
+        <img src="images/3.jpg" alt="Front Cover">
+      </div>
 
-<div class="book-front">
-<img src="images/3.jpg" alt="Jujutsu Kaisen Front Cover">
-</div>
+      <div class="book-back">
+        <img src="images/jjk3back.jpg" alt="Back Cover">
+      </div>
 
-<div class="book-back">
-<img src="images/jjk3back.jpg" alt="Jujutsu Kaisen Back Cover">
-</div>
+    </div>
+  </div>
 
-</div>
+  <!-- SIDE BOX -->
+  <div class="side-info">
+    <h3>Cover Info</h3>
+    <p><strong>Character:</strong> Nobara Kugisaki</p>
+    <p><strong>Theme:</strong> Prickly Red</p>
+    <p><strong>Vibe:</strong> Red / Action</p>
+  </div>
 
 </div>
 
@@ -109,8 +138,7 @@ border-radius:8px;
 <h2>Summary</h2>
 
 <p>
-Volume 3 covers the buildup to the Kyoto Goodwill Event, early clashes between Tokyo and Kyoto students, and a disturbing case involving a cursed spirit causing grotesque body alterations. It focuses on character development for Fushiguro, Kugisaki, and Yuji while setting up major conflicts for the next arc.
-</p>
+Jujutsu Kaisen Volume 3 focuses on the lead-up to the Kyoto Goodwill Event and the growing tension between the two schools. After returning from earlier missions, Yuji Itadori continues training in secret with Satoru Gojo, improving his control over cursed energy while the higher-ups still want him executed. Meanwhile, the Kyoto students—especially Aoi Todo—prepare to eliminate Yuji during the upcoming event. At the same time, the villains, including Mahito, continue developing their plans, experimenting with cursed techniques and creating stronger threats. The volume builds suspense by setting up both the school conflict and the larger danger, leading directly into the intense battles of the Goodwill Event.</p>
 
 <h2>Where to Buy</h2>
 
@@ -118,13 +146,9 @@ Volume 3 covers the buildup to the Kyoto Goodwill Event, early clashes between T
 Amazon, Barnes & Noble, local bookstores, or libraries.
 </p>
 
-<h2>Extra Facts</h2>
+<h2>Arc</h2>
 
-<p>
-• Written by Gege Akutami  
-• First published in 2018  
-• Introduces Yuji, Megumi, and Gojo
-</p>
+<p>Small Fry </p>
 
 <a href="manga.html">
 <button>Back to Manga</button>

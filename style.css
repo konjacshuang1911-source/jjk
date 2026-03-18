@@ -258,3 +258,65 @@ padding-left:25px;     /* moves text away from edge */
 .fact-box li{
 margin:8px 0;
 }
+
+/* layout: book + side box */
+
+.book-row{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:30px;
+flex-wrap:wrap; /* keeps it responsive */
+margin-bottom:20px;
+}
+
+/* side info box */
+
+.side-info{
+background:#1f1f1f;
+padding:15px;
+border-radius:10px;
+border-left:4px solid #4CAF50;
+width:180px;
+text-align:left;
+}
+
+.side-info h3{
+margin-top:0;
+}
+
+.side-info p{
+margin:5px 0;
+}
+
+/* home button */
+
+.home-btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 24px;
+background:linear-gradient(135deg, #4CAF50, #2e7d32);
+color:white;
+text-decoration:none;
+font-size:16px;
+border-radius:30px;
+font-weight:bold;
+letter-spacing:0.5px;
+transition:all 0.3s ease;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* hover effect */
+
+.home-btn:hover{
+transform:translateY(-3px) scale(1.05);
+box-shadow:0 8px 18px rgba(0,0,0,0.5);
+background:linear-gradient(135deg, #66bb6a, #388e3c);
+}
+
+/* click effect */
+
+.home-btn:active{
+transform:scale(0.95);
+box-shadow:0 3px 8px rgba(0,0,0,0.3);
+}

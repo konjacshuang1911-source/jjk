@@ -3,64 +3,134 @@
 
 <head>
 <title>Manga Section</title>
-<link rel="stylesheet" href="style.css">
 
 <style>
 
+/* GENERAL */
+
 body{
-font-family:Arial;
-background-color:#3a3a3a;
-color:white;
-text-align:center;
+  font-family: Arial, sans-serif;
+  background: #3a3a3a;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 60px;
 }
 
-/* column container */
+/* TITLE */
 
-.manga-column{
-display:flex;
-flex-direction:column;
-align-items:center;
-gap:25px;
-margin-top:30px;
+h1{
+  margin-top: 30px;
+  font-size: 40px;
 }
 
-/* manga card */
+/* DESCRIPTION */
+
+p{
+  color: #b3b3b3;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* HOME BUTTON */
+
+.home-btn{
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  background: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 999px;
+  transition: 0.3s;
+}
+
+.home-btn:hover{
+  background: #66bb6a;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #4CAF50;
+}
+
+/* GRID */
+
+.manga-grid{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px;
+}
+
+/* CARD */
 
 .manga-card{
-background-color:#2b2b2b;
-padding:15px;
-border-radius:12px;
-width:250px;
-transition:transform 0.25s ease, box-shadow 0.25s ease;
+  background: #1f1f1f;
+  border-radius: 15px;
+  padding: 15px;
+  width: 220px;
+  transition: all 0.3s ease;
 }
+
+/* HOVER EFFECT */
 
 .manga-card:hover{
-transform:scale(1.05);
-box-shadow:0 6px 15px rgba(0,0,0,0.4);
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 20px rgba(76, 175, 80, 0.7);
 }
 
-/* manga image */
+/* IMAGE */
 
 .manga-card img{
-width:200px;
-border-radius:8px;
+  width: 100%;
+  border-radius: 10px;
 }
 
-/* button */
+/* BUTTON */
 
 .manga-card button{
-margin-top:10px;
-background-color:#4CAF50;
-color:white;
-border:none;
-padding:10px 20px;
-cursor:pointer;
-border-radius:8px;
-font-size:15px;
+  margin-top: 12px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.25s;
 }
 
-</style>
+.manga-card button:hover{
+  background: #66bb6a;
+  box-shadow: 0 0 10px #4CAF50;
+}
 
+/* BANNER */
+
+.banner {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #4CAF50;
+  overflow: hidden;
+  height: 40px;
+  line-height: 40px;
+}
+
+.banner p{
+      display:inline-block;
+      white-space:nowrap;
+      padding-left:100%;
+      animation:scroll 15s linear infinite;
+      margin:0;
+    }
+
+ @keyframes scroll{
+      0%{transform:translateX(0);}
+      100%{transform:translateX(-100%);}
+    }
+
+</style>
 </head>
 
 <body>
@@ -68,39 +138,55 @@ font-size:15px;
 <h1>Manga</h1>
 
 <p>
-This is the manga section. Click on the manga you want to learn about.
-<br><br>
-Just so you know, you won't be able to read the manga here.  
-You'll only get a summary. Go borrow from the library or buy it from a store.  
-Support the author!
+Browse manga volumes below. Click any volume to view a summary.
 </p>
 
-  <a class="home-btn" href="index.html">← Back to Homepage</a>
+<a class="home-btn" href="index.html">← Back to Homepage</a>
 
 <div class="manga-grid">
 
-<div class="manga-grid">
+  <div class="manga-card">
+    <img src="images/0.jpg">
+    <a href="volume0.html"><button>Volume 0</button></a>
+  </div>
 
-<div class="manga-card">
-<img src="images/1.jpg">
-<br>
-<a href="volume1.html"><button>Volume 1</button></a>
+  <div class="manga-card">
+    <img src="images/1.jpg">
+    <a href="volume1.html"><button>Volume 1</button></a>
+  </div>
+
+  <div class="manga-card">
+    <img src="images/2.jpg">
+    <a href="volume2.html"><button>Volume 2</button></a>
+  </div>
+
+  <div class="manga-card">
+    <img src="images/3.jpg">
+    <a href="volume3.html"><button>Volume 3</button></a>
+  </div>
+
+  <div class="manga-card">
+    <img src="images/4.jpg">
+    <a href="volume4.html"><button>Volume 4</button></a>
+  </div>
+
+  <div class="manga-card">
+    <img src="images/5.jpg">
+    <a href="volume5.html"><button>Volume 5</button></a>
+  </div>
+
+    <div class="manga-card">
+    <img src="images/6.jpg">
+    <a href="volume6.html"><button>Volume 6</button></a>
+  </div>
+
+
+
 </div>
 
-<div class="manga-card">
-<img src="images/2.jpg">
-<br>
-<a href="volume2.html"><button>Volume 2</button></a>
-</div>
-
-<div class="manga-card">
-<img src="images/3.jpg">
-<br>
-<a href="volume3.html"><button>Volume 3</button></a>
-</div>
-
+<div class="banner">
+  <p style="color:#000000;">Like the other parts of my website, the manga section is still a work in progress! Also, summaries may not be fully accurate. Welcome to the manga section! Here, you will be able to view Jujutsu Kaisen manga covers, summaries, and more!</p>
 </div>
 
 </body>
-
 </html>
